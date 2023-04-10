@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://s2x6qq8ktl7e"]
+
+[ext_resource type="Script" path="res://map_select.gd" id="1_e0vkp"]
+[ext_resource type="Theme" uid="uid://b6dgyk6ivh1aw" path="res://Menu Theme.tres" id="1_mn431"]
+
+[node name="Map Select" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e0vkp")
+
+[node name="Map1" type="Button" parent="."]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+theme = ExtResource("1_mn431")
+
+[node name="Map2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_right = 250.0
+offset_bottom = 100.0
+theme = ExtResource("1_mn431")
+
+[node name="Map3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 300.0
+offset_right = 400.0
+offset_bottom = 100.0
+theme = ExtResource("1_mn431")
+
+[node name="Map4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 450.0
+offset_right = 550.0
+offset_bottom = 100.0
+theme = ExtResource("1_mn431")
+
+[connection signal="pressed" from="Map1" to="." method="_on_map_1_pressed"]
+[connection signal="pressed" from="Map2" to="." method="_on_map_2_pressed"]
+[connection signal="pressed" from="Map3" to="." method="_on_map_3_pressed"]
+[connection signal="pressed" from="Map4" to="." method="_on_map_4_pressed"]
