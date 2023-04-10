@@ -1,9 +1,34 @@
-[gd_scene format=3 uid="uid://bd00w06i0tsle"]
+[gd_scene load_steps=3 format=3 uid="uid://bd00w06i0tsle"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_1177j"]
+[ext_resource type="Theme" uid="uid://b6dgyk6ivh1aw" path="res://Menu Theme.tres" id="1_c81fo"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchor_right = 0.597
 anchor_bottom = 1.0
-offset_right = 464.256
+offset_top = -4.0
+offset_right = 515.84
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1177j")
+
+[node name="Maps" type="Button" parent="."]
+layout_mode = 0
+offset_top = 468.0
+offset_right = 562.0
+offset_bottom = 606.0
+theme = ExtResource("1_c81fo")
+text = "MAPS"
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 468.0
+offset_right = 1278.0
+offset_bottom = 606.0
+theme = ExtResource("1_c81fo")
+text = "START"
+
+[connection signal="pressed" from="Maps" to="." method="_on_maps_pressed"]
